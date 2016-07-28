@@ -14,6 +14,7 @@ namespace PokemonGo.RocketAPI.Helpers
         public static async Task<TResponse> PostFormEncodedAsync<TResponse>(string url,
             params KeyValuePair<string, string>[] keyValuePairs)
         {
+            System.Threading.Thread.Sleep(250);
             var handler = new HttpClientHandler
             {
                 AutomaticDecompression = DecompressionMethods.GZip,
